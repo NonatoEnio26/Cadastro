@@ -1,0 +1,14 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Enio Nonato",
+      "cep": "09530-480",
+      "endereco": "Travessa Ricieri Marane, 56",
+      "cidade": "São Caetano do Sul",
+      "uf": "SP",
+      "ativo": true,
+      "celular": "11999512518"
+    }
+  ]
+}

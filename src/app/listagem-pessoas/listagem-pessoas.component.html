@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <h2>Listagem de Pessoas</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>CEP</th>
+                <th>UF</th>
+                <th>Celular</th>
+                <th>Ativo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of people">
+                <td>{{ person.id }}</td>
+                <td>{{ person.nome }}</td>
+                <td>{{ person.endereco }}</td>
+                <td>{{ person.cep }}</td>
+                <td>{{ person.uf }}</td>
+                <td>{{ person.celular }}</td>
+                <td>{{ person.ativo }}</td>
+                <td>
+
+                    <button class="btn btn-primary btn-sm" 
+                    *ngIf="person.id !== undefined" 
+                    (click)="editPerson(person.id!)">
+              Editar
+            </button>
+            
+            <button class="btn btn-danger btn-sm" 
+                    *ngIf="person.id !== undefined" 
+                    (click)="deletePerson(person.id!)">
+              Excluir
+            </button>
+
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+ 
